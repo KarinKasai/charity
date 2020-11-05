@@ -1,0 +1,1375 @@
+/* UNIVERSAL */
+
+/* html {
+	margin: 0;
+	overflow: hidden;
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Anton', sans-serif;
+}
+
+p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 200;
+    font-size: 1.3em;
+}
+
+h1 {
+    font-size: 4.7em;
+}
+
+h2 {
+    font-size: 3.8em;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 2.4em;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+/******** HOME PAGE START *********/
+
+/**------ Navigation START------**/
+
+/** navigation layout with flexbox **/
+
+.nav {
+    height: 10vh;
+    width: 100%;
+    background-color: rgba(26, 117, 121, 0.7);
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: .3s;
+}
+
+.nav, .nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav img {
+    width: 50%;
+    margin-left: 30%;
+    z-index: 3;
+}
+
+.nav ul {
+    width: 55%;
+    margin-right: 5%;
+    justify-content: space-between;
+}
+
+.nav ul li {
+    list-style-type: none;
+}
+
+.nav ul li a {
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: .3s all ease-in-out;
+}
+
+.nav ul li a:hover {
+    color: rgb(194, 244, 237);
+}
+
+.nav_button {
+    background-color: rgb(51, 252, 252);
+    border-radius: 0.2em;
+    padding: 14px 18px;
+}
+
+/**------ Donate button animation------**/
+
+.nav_button:hover {
+    animation: flash 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flash {
+    0% {
+        background: #20b2aa;
+        color: rgb(184, 233, 235);
+    }
+    50% {
+        background: #9eebe8;
+    }
+    100% {
+        background: rgb(51, 252, 252);
+        color: rgb(16, 17, 17);
+    }
+}
+
+/**------ HERO image ------**/
+
+.hero {
+    padding: 0;
+    background-image: url(img/hp_img/hp_hero.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero h1 {
+    margin: 0;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: extra-light;
+    line-height: 120%;
+}
+
+.hero_text {
+    position: absolute;
+    top: 12%;
+    left: 13%;
+}
+
+/**------ DONATE NOW SLIDE ------**/
+
+.donate_slide {
+    background-color: rgb(51, 252, 252);
+    width: 12%;
+    height: 100vh;
+    z-index: 4;
+    transition: all ease 0.6s;
+}
+.donate_slide a {
+    text-decoration: none;
+    color:rgb(148, 148, 148);
+}
+
+.donate_slide:hover {
+    border-radius: 0 50px 50px 0;
+}
+
+.donate_slide h1 {
+    font-size: 6em;
+    writing-mode: vertical-rl;
+    letter-spacing: .2em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(148, 148, 148);
+    position: absolute;
+    top: 12%;
+    left: 1%;
+    transition: all ease 0.6s;
+}
+
+.donate_slide h1:hover {
+    -webkit-text-fill-color: black;
+}
+
+/**------ CHALLENGE SECTION ------**/
+
+.challenge_intro {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.challenge_intro p {
+    text-align: center;
+    font-size: 2.5em;
+    font-style: italic;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/* background image scroll */
+
+.challenge {
+    height: 100vh;
+    background-image: url(img/hp_img/happening_bg.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.p_challenge {
+    width: 40%;
+    background-color: rgb(51, 252, 252, 0.6);
+    position: absolute;
+    left: 5%;
+    top: 16%;
+    padding: 5%;
+}
+
+.p_challenge h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/**------ OUR WORK SECTION ------**/
+
+.work {
+    margin: 0;
+    padding-top: 3em;
+    padding-bottom: 7em;
+    box-shadow: 0px 5px 30px rgb(51, 252, 252);
+}
+
+.our_work {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* image hover gray scale */
+
+.our_work .work_box img {
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+    filter: grayscale(1);
+    transition: all ease 0.6s;
+    box-shadow: 0px 0px 10px rgb(155, 155, 155), 0px 0px 5px rgb(107, 106, 106) inset;
+}
+
+.work_box img:hover {
+    filter: grayscale(0);
+}
+
+.work_box h4, .work_box p {
+    margin: 0.4em;
+    text-align: center;
+}
+
+.work_box p {
+    font-size: 1em;
+    padding: 0 1em;
+}
+
+.work_button {
+    text-align: right;
+    margin-top: 3.5em;
+}
+
+/* change font/border color for our work button*/
+
+.work_btn {
+    color: black;
+    border: 2px solid black;
+}
+
+.work_btn:hover {
+    color: white;
+    border: 2px solid white;
+}
+
+/**------ OUR IMPACT SECTION ------**/
+
+.our_impact {
+    height: 80vh;
+    background-image: url(img/hp_img/map.png);
+    background-size: 50%;
+    background-attachment: fixed;
+    background-position: right center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding-top: 5em;
+    padding-bottom: 7em;
+    position: relative;
+}
+
+.our_impact h2 {
+    margin: 0;
+}
+
+.our_impact p span {
+    font-size: 1.7em;
+}
+
+.our_impact p {
+    font-size: 1.6em;
+}
+
+.impact_text {
+    width: 30%;
+    background-color: rgb(51, 252, 252, 0.6);
+    position: absolute;
+    left: 5%;
+    top: 16%;
+    padding: 5%;
+}
+
+.animation_text {
+    animation: appear 1s;
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/**------ SPONSOR SECTION ------**/
+
+.sponsor {
+    height: 80vh;
+    background-image: linear-gradient( white, #04697F);
+    /* z-index: 100; */
+    position: relative;
+}
+
+.sponsor h1 {
+    margin: 0;
+    font-size: 8em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: rgb(104, 102, 102);
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation-name: textloop;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    /* transition-timing-function: linear; */
+}
+
+@keyframes textloop {
+    from {
+        transform: translateX(1200px)
+    }
+    to {
+        transform: translateX(-1700px)
+    }
+}
+
+.sponsor_text {
+    width: 50%;
+}
+
+.sponsor_text h2 {
+    margin: 0;
+}
+
+.sponsor_flex {
+    padding-top: 7em;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+/* button animation */
+
+/* change font/border color for sponsor button*/
+
+.sponsor_btn {
+    color: white;
+    border: 2px solid white;
+}
+
+.sponsor_btn:hover {
+    color: black;
+    border: 2px solid black;
+}
+
+/* common button animation*/
+
+.button {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.3em;
+    position: relative;
+    display: inline-block;
+    padding: .5em 4em;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.button:hover {
+    z-index: 1;
+}
+
+.button::before, .button::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform .3s;
+}
+
+.button::before {
+    background: rgb(194, 244, 237);
+}
+
+.button::after {
+    background: rgb(51, 252, 252);
+}
+
+.button:hover::before, .button:hover::after {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+.button:hover::after {
+    transition-delay: .3s;
+}
+
+/**------ OUR STORY SECTION ------**/
+
+.story {
+    padding-top: 3em;
+    padding-bottom: 7em;
+}
+
+.story_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.story_flex p {
+    margin: 0;
+    width: 50%;
+}
+
+/**------ FOOTER SECTION ------**/
+
+footer {
+    margin: 0;
+    padding-bottom: 3em;
+    background-color: rgb(236, 240, 240);
+}
+
+footer .grid_footer p {
+    font-size: 1em;
+}
+
+footer .grid_footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.grid_footer .item_1 img {
+    width: 80%;
+}
+
+.grid_footer .item_3 img {
+    width: 18%;
+    margin-right: 1em;
+}
+
+.grid_footer h5 {
+    margin: 0;
+}
+
+.grid_footer .item_7 p {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+/* subscribe newsletter form */
+
+.grid_footer .item_2 form input[type=email], .grid_footer .item_2 form input[type=submit] {
+    font-size: 1.1em;
+    text-align: center;
+    margin: .5em 0 0 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+.grid_footer .item_2 form input[type=email] {
+    padding: .9em 4em;
+}
+
+.grid_footer .item_2 form input[type=submit] {
+    padding: .9em 1em;
+    background-color: #04697F;
+    color: white;
+    transition: all 0.2s;
+}
+
+.grid_footer .item_2 form input[type=submit]:hover {
+    background-color: rgb(5, 133, 161);
+}
+
+/* layout with grid */
+
+.grid_footer {
+    height: 50vh;
+    padding-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr;
+    grid-template-rows: 40% 60%;
+    justify-items: start;
+    align-items: start;
+}
+
+.item_1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.item_2 {
+    grid-column: 2 / span 3;
+    grid-row: 1;
+}
+
+/* copyright */
+
+.copyright {
+    text-align: center;
+    margin: 0;
+}
+
+.copyright p {
+    font-size: .8em;
+    color: gray;
+}
+
+/******** ABOUT PAGE START *********/
+
+/**------ HERO image ------**/
+
+.hero_about {
+    margin: 0;
+    padding: 0;
+    background-image: url(img/about_img/about_hero.png);
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.hero_about_text {
+    height: 100vh;
+    width: 50%;
+    background-image: linear-gradient(to right, rgb(51, 252, 252), rgb(214, 252, 252));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/* About page hero text animation */
+
+.hero_txt_animation {
+    animation: about_appear 1s;
+}
+
+@keyframes about_appear {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero_txt_animation h1 {
+    margin: 0 0 0 60px;
+    padding: 0;
+    line-height: 1.2em;
+}
+
+.hero_txt_animation p:nth-child(1) {
+    font-size: 4em;
+    padding: 0;
+    margin: 0 0 10px 60px;
+}
+
+.hero_txt_animation p:nth-last-child(1) {
+    font-size: 2em;
+    line-height: 1.2em;
+    padding: 0;
+    margin: 15px 0 0 60px;
+}
+
+/**------ Layout by grid area ------**/
+
+.grid_area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(60vh, auto);
+    grid-template-areas: "mission history" "ceotxt ceoimg" "team team";
+}
+
+.mission {
+    grid-area: mission;
+}
+
+.history {
+    grid-area: history;
+}
+
+.ceo_img {
+    grid-area: ceoimg;
+}
+
+.ceo_intro {
+    grid-area: ceotxt;
+}
+
+.team {
+    grid-area: team;
+}
+
+
+
+/**------ OUR MISSION SECTION ------**/
+
+.mission {
+    text-align: right;
+    padding: 3em 3em 5em 5em;
+}
+
+.mission .mission_img_1 {
+    width: 70%;
+}
+
+.mission .mission_img_2 {
+    width: 40%;
+}
+
+.mission p {
+    margin-bottom: 2em;
+}
+
+/**------ OUR HISTORY SECTION ------**/
+
+.history {
+    background-image: linear-gradient(to left, rgb(51, 252, 252), rgb(214, 252, 252));
+    text-align: left;
+    padding: 3em 5em 5em 3em;
+}
+
+/* line graphic align left by using float */
+
+.history img {
+    margin: 3em 0.6em 0 1em;
+    width: 10%;
+    float: left;
+    clear: both;
+}
+
+.history h4 {
+    font-size: 1.5em;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+/* adjust spacing by margin-top */
+
+.history h4:nth-of-type(2) {
+    margin-top: 1.6em;
+}
+
+.history h4:nth-of-type(3) {
+    margin-top: 6em;
+}
+
+.history h4:nth-of-type(4) {
+    margin-top: 5.5em;
+}
+
+.history h4:nth-of-type(5) {
+    margin-top: 6em;
+}
+
+.history_button {
+    margin-top: 8em;
+    text-align: right;
+}
+
+/**------ CEO SECTION ------**/
+
+.ceo_intro {
+    background-image: linear-gradient(to right, rgb(51, 252, 252), rgb(214, 252, 252));
+    margin: 0;
+    padding: 3em 3em 5em 5em;
+    text-align: right;
+}
+
+.ceo_img img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/**------ OUR TEAM SECTION ------**/
+
+.team {
+    padding-top: 4em;
+    padding-bottom: 6em;
+}
+
+/* for some reason % doesn't work for the 4th image */
+
+.team_flexbox img {
+    width: 260px;
+}
+
+.team_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.team_flexbox p {
+    margin: 0;
+}
+
+.team_flexbox p:nth-of-type(1) {
+    font-weight: 800;
+}
+
+.team_flexbox p:nth-of-type(2) {
+    font-size: 1em;
+}
+
+.getintouch {
+    background-color: blueviolet;
+}
+
+/******** OUR WORK PAGE START *********/
+
+/**------ OUR WORK HERO SECTION ------**/
+
+.project_hero {
+    padding: 0;
+    background-image: url(img/ourwork_img/ourwork_hero_2.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.project_hero img {
+    width: 58%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/**------ OUR PROJECT SECTION ------**/
+
+.our_projects {
+    height: auto;
+    margin-bottom: 6em;
+}
+
+.our_projects h2 {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
+.our_projects p {
+    margin-bottom: 2em;
+}
+
+.project_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    grid-column-gap: 3%;
+    grid-row-gap: 5%;
+    padding-bottom: 4em;
+}
+
+.project_gridbox img {
+    width: 100%;
+    margin: 0;
+}
+
+.project_gridbox h4 {
+    margin: 0.3em 0 0.3em 0;
+    letter-spacing: 3px;
+    border-bottom: 1px solid gray;
+}
+
+.project_gridbox p {
+    margin: 0;
+}
+
+/* image hover effect */
+
+.img_hover_container {
+    position: relative;
+}
+
+.img_hover {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.img_hover_container:hover .img_hover {
+    opacity: 0.3;
+}
+
+.img_hover_container:hover .middle {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.text {
+    background-color: rgb(51, 252, 252);
+    color: black;
+    font-size: 1.2em;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 200;
+    padding: 1em 1.5em;
+}
+
+/**------ Youtube SECTION ------**/
+
+.youtube {
+    margin-top: 3em;
+}
+
+.youtube h2 {
+    margin: 0;
+}
+
+.youtube p {
+    width: 80%;
+    margin: 0.8em 0 1.5em 0;
+}
+
+.youtube img {
+    width: 90%;
+    display: block;
+    margin: 5em auto;
+}
+
+.youtube_button {
+    text-align: right;
+}
+
+/**------ EVENTS SECTION ------**/
+
+.events {
+    margin-bottom: 7em;
+}
+
+.events_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.events_flexbox_2 {
+    margin-left: 6%;
+}
+
+.events_flexbox_2 .events_button {
+    margin-top: 1.6em;
+    text-align: right;
+}
+
+/******** GET INVOLVED PAGE START *********/
+
+.hero_involved {
+    margin: 0;
+    padding: 0;
+    background-image: url(img/involved_img/involved_hero.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero_involved_text {
+    height: 80vh;
+    background-color: rgb(51, 252, 252, 0.6);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 14%;
+    left: 10%;
+}
+
+/**------ YOUTH OPPORTUNITY SECTION ------**/
+/**------ Parallax effect ------**/
+.youth {
+	height: 100vh;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	perspective: 1px;
+	-webkit-perspective: 1px;
+}
+
+.back {
+	transform: translateZ(-1px) scale(2);
+	-webkit-transform: translateZ(-1px) scale(2);
+}
+
+.bgimg {
+	width: 100%;
+}
+
+.para_1{
+    font-size: 5em;
+    color: white;
+    position: relative;
+    left: 10%;
+    top: 600px;
+    letter-spacing: 2px;
+}
+.para_2{
+    width: 30%;
+    font-size: 1.5em;
+    color: white;
+    position: relative;
+    left: 10%;
+    top: 800px;
+}
+
+.parallax-group {
+	transform-style: preserve-3d;
+}
+
+.front_1 {
+	position: relative;
+	left: 50%;
+	top: -500px;
+}
+
+.front_2 {
+	position: relative;
+	left: 60%;
+	top: -600px;
+}
+
+.front_3 {
+	position: relative;
+	left: 40%;
+	top: -700px;
+}
+
+.frontimg_1 {
+    width: 20%;
+    height: auto;
+    margin:1em;
+}
+.frontimg_2 {
+	width: 30%;
+    height: auto;
+    margin:1em;
+}
+
+/*--------------------------------------------- */
+
+/*------------ child sponsor -------------- */
+.child_sponsor {
+    margin: 5em 0 4em 0;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+.child_sponsor_text {
+    background-image: linear-gradient(to bottom right, rgb(190, 253, 237), rgb(51, 252, 252));
+    width: 60%;
+    height: 70vh;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 3em;
+}
+
+.child_sponsor_text h2 {
+    margin-left: 4em;
+    margin-top: 0.3em;
+}
+
+.child_sponsor_text p {
+    margin-left: 10em;
+    margin-top: 2em;
+}
+
+.child_sponsor img {
+    width: 38%;
+    position: absolute;
+    top:10%;
+    left: 10%;
+}
+
+.childsponsor_button {
+    position: absolute;
+    right: 10%;
+    top: 90%;
+}
+
+.volunteer_detail_btn {
+        color: black;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1.3em;
+        padding: 0.5em 4em;
+        text-align: center;
+        text-decoration: none;
+        transition: .3s;
+    }
+    
+    .volunteer_detail_btn:hover {
+        border: 2px solid white;
+        color: white;
+        border-radius: 5px;
+    }
+
+
+/*-------- child sponsor apply button ---------- */
+
+.sponsor_apply {
+    margin: 3em 0 3em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.apply_box {
+    margin: 1em;
+}
+.apply_box h4 {
+    text-align: center;
+}
+
+
+.apply_button {
+    color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.3em;
+    position: relative;
+    display: inline-block;
+    padding: 1.2em 4em;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.apply_button:hover {
+    z-index: 1;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+}
+
+.apply_button::before, .apply_button::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform .3s;
+}
+
+.apply_button::before {
+    background: rgb(194, 244, 237);
+}
+
+.apply_button::after {
+    background: rgb(5, 70, 70);
+}
+
+.apply_button:hover::before, .apply_button:hover::after {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+.apply_button:hover::after {
+    transition-delay: .3s;
+}
+
+/*------------ Fundraise -------------- */
+
+.fundraise {
+    margin: 5em 0 3em 0;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+
+.fundraise_text {
+    background-image: linear-gradient(to bottom right, rgb(190, 253, 237), rgb(51, 252, 252));
+    width: 60%;
+    height: 70vh;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 3em;
+}
+.fundraise_text h2 {
+    margin: 0.5em 0 0.4em 1.7em;
+    
+}
+.fundraise_text p {
+    margin: 0 11em 0 4.7em;
+}
+
+.fundraise img {
+    width: 43%;
+    position: absolute;
+    top:13%;
+    right: 7%;
+}
+
+.fundraise_button {
+    position: absolute;
+    left: 10%;
+    top: 80%;
+}
+
+
+
+/**------ FAQ SECTION ------**/
+
+.faq {
+    margin: 5em 0 0 0;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.faq_text {
+    margin: 0;
+    padding: 0 3em;
+    width: 50%;
+    height: 100%;
+    text-align: right;
+    background-color: rgba(26, 117, 121);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.faq_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.faq_btn {
+        color: black;
+        border: 2px solid black;
+        border-radius: 5px;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1.3em;
+        padding: 0.5em 4em;
+        text-align: center;
+        text-decoration: none;
+        transition: .3s;
+        display: block;
+    }
+    
+    .faq_btn:hover {
+        border: 2px solid white;
+        background-color: rgba(26, 117, 121);
+        color: white;
+        border-radius: 5px;
+    }
+
+/******** DONATE PAGE START *********/
+
+.hero_donate {
+    margin: 0;
+    padding: 0;
+    background-image: url(img/donate_img/donate_bg.jpeg);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.form {
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255, 0.6);
+    padding: 2em 4em;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 50px 10px rgb(252, 249, 249);
+}
+
+.form h2 {
+    margin: 0 auto;
+}
+
+.form p {
+    width: 80%;
+    margin: 0 auto 1em auto;
+}
+
+.form p:nth-of-type(1) {
+    font-size: 1.3em;
+    font-weight: 800;
+    margin-bottom: 1em;
+}
+
+.form p:nth-of-type(2) {
+    font-size: 1em;
+     
+}
+
+.donate {
+    width: 70%;
+    margin: 0 auto 1em auto;
+}
+
+.donate input[type=button] {
+    background-color: white;
+    border: 2px solid #ccc;
+    color: black;
+    font-size: 1.5em;
+    padding: 0.7em 1.4em;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 5px;
+    transform: translateY(1px);
+    filter: saturate(150%);
+    transition: all ease 0.6s;
+}
+
+.donate input[type=button]:focus {
+    background-color:rgb(51, 252, 252);
+}
+
+.donate input[type=button]:hover {
+    background-color:rgb(51, 252, 252);
+}
+
+
+
+.donate input[type=submit] {
+    background-color: #04697F;
+    border: 2px solid #ccc;
+    color: white;
+    font-size: 2.2em;
+    font-weight: 800;
+    padding: 1em 2em;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all ease 0.6s;    
+}
+
+.donate input[type=submit]:active {
+    background-color: rgb(51, 252, 252);
+    color: black;
+}
+.donate input[type=submit]:hover {
+    background-color:rgb(51, 252, 252);
+    color: black;
+}
+
+.donate input[type=text] {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 1.2em 3em 1.2em 4em;
+    display: inline-block;
+}
+
+.donate {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1fr, 1fr, 1fr, 1.5fr);
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em
+}
+
+.item1 {
+    grid-column: 1 / 3;
+}
+
+.item2 {
+    grid-column: 3 / 5;
+}
+
+.item7 {
+    grid-column: 1 / 5;
+}
+
+.item8 {
+    grid-column: 1 / 5;
+}
